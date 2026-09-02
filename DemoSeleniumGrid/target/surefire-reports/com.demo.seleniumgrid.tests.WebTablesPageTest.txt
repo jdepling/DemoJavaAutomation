@@ -1,0 +1,55 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.seleniumgrid.tests.WebTablesPageTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 37.44 s <<< FAILURE! -- in com.demo.seleniumgrid.tests.WebTablesPageTest
+com.demo.seleniumgrid.tests.WebTablesPageTest.deleteRecordRemovesRowFromTable(BrowserType)[2] -- Time elapsed: 11.41 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element ([[RemoteWebDriver: firefox on linux (63f53ed6-c25b-4bc3-bd40-e55887d1368a)] -> css selector: table tbody tr]) to become stale
+(tried for 5 seconds with 500 milliseconds interval)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.2.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 153.0.4, container:hostname: 920efcae0066, moz:accessibilityChecks: false, moz:buildID: 20260810162159, moz:firefoxOptions: {prefs: {remote.active-protocols: 1}}, moz:geckodriverVersion: 0.37.1, moz:headless: false, moz:platformVersion: 6.18.33.2-microsoft-standar..., moz:processID: 13442, moz:profile: /tmp/rust_mozprofileH17liR, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdpEnabled: false, se:containerName: 920efcae0066, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.5:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.5:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: 63f53ed6-c25b-4bc3-bd40-e55887d1368a
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.demo.seleniumgrid.pages.WebTablesPage.deleteRowContaining(WebTablesPage.java:74)
+	at com.demo.seleniumgrid.tests.WebTablesPageTest.deleteRecordRemovesRowFromTable(WebTablesPageTest.java:66)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+com.demo.seleniumgrid.tests.WebTablesPageTest.deleteRecordRemovesRowFromTable(BrowserType)[1] -- Time elapsed: 22.74 s <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <span id="delete-record-1" data-toggle="tooltip" title="Delete">...</span> is not clickable at point (848, 371). Other element would receive the click: <div class="col-12 mt-4 col-md-3 col-xl-3">...</div>
+  (Session info: chrome=151.0.7922.108)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.2.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [1fc1d0322a2dd642e2e5997674cbb64c, clickElement {id=f.DF7101B01DB2DC4786DD7EF670BD067E.d.C8E3E5621FC38CF6EDE6F9E237682444.e.23}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.108, chrome: {chromedriverVersion: 151.0.7922.77 (ff37cfca2101..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45591}, goog:processID: 6520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.4:4444/sessio..., se:cdpVersion: 151.0.7922.108, se:containerName: 6f4f79c84082, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.4:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.4:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[RemoteWebDriver: chrome on linux (1fc1d0322a2dd642e2e5997674cbb64c)] -> css selector: table tbody tr]] -> css selector: span[title='Delete']]
+Session ID: 1fc1d0322a2dd642e2e5997674cbb64c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:225)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at com.demo.seleniumgrid.pages.WebTablesPage.deleteRowContaining(WebTablesPage.java:72)
+	at com.demo.seleniumgrid.tests.WebTablesPageTest.deleteRecordRemovesRowFromTable(WebTablesPageTest.java:66)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(ForkJoinPool.java:1490)
+	at java.base/java.util.concurrent.ForkJoinPool.helpJoin(ForkJoinPool.java:2248)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:499)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:1018)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
